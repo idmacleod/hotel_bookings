@@ -4,7 +4,7 @@
             <li v-for="(booking, index) in bookings" :key="index"> 
                 Name: {{ booking.name }}
                 <ul>
-                    <li>Email: {{ booking.email}} </li>
+                    <li>Email: {{ booking.email }} </li>
                     <li v-if="booking.checked_in">
                         <span>Checked In</span>
                         <button v-on:click="toggleCheckedIn(booking)">Check Out</button>
