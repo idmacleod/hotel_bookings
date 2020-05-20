@@ -14,6 +14,7 @@
 
 <script>
 import BookingService from '../services/BookingService.js';
+import { eventBus } from '../main.js';
 
 export default {
     name: 'booking-form',
@@ -32,7 +33,7 @@ export default {
                 check_in: this.checked_in
             }
             BookingService.addBooking(newBooking)
-                .then(booking => console.log(booking));
+                .then(booking => eventBus.$emit('booking-added', booking));
         }
     }
 }
