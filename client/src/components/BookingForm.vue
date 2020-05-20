@@ -31,7 +31,8 @@ export default {
                 email: this.email,
                 check_in: this.checked_in
             }
-
+            BookingService.addBooking(newBooking)
+                .then(booking => console.log(booking));
         }
     }
 }
